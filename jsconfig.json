@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@root/*": [
+                "./*"
+            ],
+            "@routes/*": [
+                "./src/routes/*"
+            ],
+            "@nobanco/*": [
+                "./src/*"
+            ],
+            "@assets/*": [
+                "./src/assets/*"
+            ],
+            "@images/*": [
+                "./src/assets/images/*"
+            ],
+            "@pages/*": [
+                "./src/pages/*"
+            ],
+            "@utils/*": [
+                "./src/utils/*"
+            ]
+        }
+    }
+}
