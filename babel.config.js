@@ -5,7 +5,7 @@ module.exports = function (api) {
         plugins: [
             ['react-native-reanimated/plugin'],
             [
-                require.resolve('babel-plugin-module-resolver'),
+                'module-resolver',
                 {
                     alias: {
                         '@root': './',
@@ -15,6 +15,7 @@ module.exports = function (api) {
                         '@images': './src/assets/images',
                         '@pages': './src/pages',
                         "@utils": './src/utils',
+                        "@components": ["./src/components"]
                     },
                 },
             ],
