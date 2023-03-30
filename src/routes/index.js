@@ -1,9 +1,11 @@
 import React from 'react';
 import SplashScreen from '@pages/SplashScreen';
+import Home from '@pages/Home';
 
 const Routes = () => {
     return(
-        <SplashScreen/>
+        <Home/>
+       //<SplashScreen/>
     );
 }
 
