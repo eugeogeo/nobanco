@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Image } from 'react-native';
 import { styles } from './styles'
 import SettingsButton from '@components/Home/SettingsButton';
+import OptionCard from '@root/src/components/Home/OptionCard';
 
 const Home = () => {
     return(
@@ -10,6 +11,7 @@ const Home = () => {
                <Image source={require('@images/Home/nobanco-brand2x.png')} style={styles.brandImage}/>
                <SettingsButton/>
             </View>
+            <OptionCard />
 
         </View>
     );
