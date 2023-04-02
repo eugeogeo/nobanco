@@ -13,7 +13,8 @@ export const styles = StyleSheet.create({
     }, title: {
         color: "#ffffff",
         fontWeight:"bold",
-       
+        fontSize: RFValue(15),
+        
     }, image: {
         width: RFValue(24),
         height: RFValue(24),

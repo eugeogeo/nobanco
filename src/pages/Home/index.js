@@ -3,6 +3,7 @@ import { View, Image } from 'react-native';
 import { styles } from './styles'
 import SettingsButton from '@components/Home/SettingsButton';
 import OptionCard from '@root/src/components/Home/OptionCard';
+import CardsCarousel from '@root/src/components/Home/CardsCarousel';
 
 const Home = () => {
     return(
@@ -11,10 +12,7 @@ const Home = () => {
                <Image source={require('@images/Home/nobanco-brand2x.png')} style={styles.brandImage}/>
                <SettingsButton/>
             </View>
-            <OptionCard 
-                urlIcon={require('@assets/icons/codeBarIcon.png')}
-                titleCard="Pix" 
-            />
+            <CardsCarousel />
 
         </View>
     );
