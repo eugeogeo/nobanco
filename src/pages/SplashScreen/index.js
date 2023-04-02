@@ -1,9 +1,8 @@
-import React from 'react';
-import { styles } from './styles';
-import { View, Image } from 'react-native';
-import { MotiView } from 'moti';
-import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
+import { MotiView } from 'moti';
+import { Image, View } from 'react-native';
+import { styles } from './styles';
 
 const SplashScreen = () => {
 
