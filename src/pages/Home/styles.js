@@ -12,10 +12,15 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingHorizontal: RFValue(30)
+        paddingHorizontal: RFValue(55)
     },
     brandImage: {
-        width: RFValue(70),
-        height: RFValue(70)
+        width: RFValue(60),
+        height: RFValue(60)
+    },
+    cardAndBalance: {
+        width: '100%',
+        padding: RFValue(30),
     }
+
 });
