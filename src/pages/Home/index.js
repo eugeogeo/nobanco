@@ -11,7 +11,10 @@ const Home = () => {
                <Image source={require('@images/Home/nobanco-brand2x.png')} style={styles.brandImage}/>
                <SettingsButton/>
             </View>
-            <OptionCard />
+            <OptionCard 
+                urlIcon={require('@assets/icons/codeBarIcon.png')}
+                titleCard="Pix" 
+            />
 
         </View>
     );
