@@ -4,19 +4,21 @@ import { RFValue } from "react-native-responsive-fontsize";
 export const styles = StyleSheet.create({
     container: {
         padding: RFValue(16),
-        margin: RFValue(10),
+        marginRight: RFValue(8),
         backgroundColor: "#9500F6",
-        borderRadius: RFValue(28),
+        borderRadius: RFValue(21),
         width: RFValue(100),
         height: RFValue(127),
         justifyContent: "space-between",
-    }, title: {
+    },
+    title: {
         color: "#ffffff",
-        fontWeight:"bold",
-        fontSize: RFValue(15),
-        
-    }, image: {
+        fontWeight: "600",
+        fontSize: RFValue(12),
+    }, 
+    image: {
         width: RFValue(24),
         height: RFValue(24),
+        resizeMode: 'contain'
     }
 });

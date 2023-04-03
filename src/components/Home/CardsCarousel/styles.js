@@ -3,17 +3,16 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 export const styles = StyleSheet.create({
     container:{
-        padding: RFValue(30),
-        
+        width: '100%'  
     },
     textTitle:{
-        alignItems:"flex-start",
-        color: "#ffffff",
+        fontSize: RFValue(14),
+        fontWeight: '600',
+        color: "#FFFFFF",
     },
-    carousel: {
-        paddingTop: RFValue(36),
-        height: RFValue(127),
-        flexDirection: "row",
-        
-    },
+    titleWrapper: {
+        width: '100%',
+        paddingHorizontal: RFValue(32),
+        marginVertical: RFValue(30)
+    }
 });
