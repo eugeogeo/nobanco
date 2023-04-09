@@ -1,12 +1,17 @@
-import React from 'react';
-import SplashScreen from '@pages/SplashScreen';
-import Home from '@pages/Home';
+import { NavigationContainer } from '@react-navigation/native';
+
+// Routes
+import AuthRoutes from './auth.routes';
+import HomeRoutes from './home.routes';
 
 const Routes = () => {
-    return(
-        <Home/>
-       //<SplashScreen/>
+    // true = hook de autenticacao que sera criado
+    return (
+        <NavigationContainer>
+            {true ? <HomeRoutes /> : <AuthRoutes />}
+        </NavigationContainer>
     );
+
 }
 
 export default Routes;

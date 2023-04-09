@@ -1,14 +1,22 @@
-import React from 'react';
-import { styles } from './styles';
-import { View, Image } from 'react-native';
-import { MotiView } from 'moti';
+import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
+import { MotiView } from 'moti';
+import { Image, View } from 'react-native';
+import { styles } from './styles';
 
 const SplashScreen = () => {
+
+    const navigation = useNavigation()
+
+    const startApp = () => {
+        navigation.navigate('Home');
+    }
+
     return (
         <View style={styles.container}>
             <StatusBar style='light' />
             <MotiView
+                onDidAnimate={(opacity, finished, value) => { !value && startApp() }}
                 from={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
