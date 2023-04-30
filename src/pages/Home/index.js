@@ -1,5 +1,6 @@
-import CardsCarousel from '@components/Home/CardsCarousel';
 import Card from '@components/Card';
+import BalanceCard from '@components/Home/BalanceCard';
+import CardsCarousel from '@components/Home/CardsCarousel';
 import SettingsButton from '@components/Home/SettingsButton';
 import { Image, View } from 'react-native';
 import { styles } from './styles';
@@ -13,6 +14,7 @@ const Home = () => {
             </View>
             <View style={styles.cardAndBalance}>
                 <Card title="Nome" />
+                <BalanceCard />
             </View>
             <CardsCarousel />
         </View>
