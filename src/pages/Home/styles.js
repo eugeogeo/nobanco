@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingHorizontal: RFValue(55)
+        paddingHorizontal: RFValue(35)
     },
     brandImage: {
         width: RFValue(60),
@@ -20,7 +20,8 @@ export const styles = StyleSheet.create({
     },
     cardAndBalance: {
         width: '100%',
-        padding: RFValue(30),
+        paddingHorizontal: RFValue(16),
+        marginTop: 40
     }
 
 });
