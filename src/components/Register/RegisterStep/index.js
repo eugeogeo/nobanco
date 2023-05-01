@@ -94,7 +94,7 @@ const RegisterStep = ({ ...props }) => {
             <View style={styles.footer}>
                 <RegisterButton
                     title={inputType ? "Continuar" : "Aceitar e cadastrar"}
-                    isDisabled={!isValid && inputType}
+                    isDisabled={!isValid && !!inputType}
                     onPress={handleFormSubmitAndNext}
                 />
             </View>
