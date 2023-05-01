@@ -8,7 +8,7 @@ const Routes = () => {
     // true = hook de autenticacao que sera criado
     return (
         <NavigationContainer>
-            {true ? <HomeRoutes /> : <AuthRoutes />}
+            {false ? <HomeRoutes /> : <AuthRoutes />}
         </NavigationContainer>
     );
 
