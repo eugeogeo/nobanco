@@ -9,7 +9,9 @@ const SplashScreen = () => {
     const navigation = useNavigation()
 
     const startApp = () => {
-        navigation.navigate('Home');
+        // true = hook de autenticacao
+        const nextScreen = false ? 'Home' : 'Onboarding';
+        navigation.navigate(nextScreen);
     }
 
     return (

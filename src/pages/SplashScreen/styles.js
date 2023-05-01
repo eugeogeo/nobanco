@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     image: {
-        width: RFValue(208),
-        height: RFValue(208)
+        width: RFValue(150),
+        height: RFValue(150)
     }
 });
