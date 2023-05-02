@@ -32,3 +32,5 @@ export async function deleteUser(id) {
 
   return response.data;
 }
+
+export default api;
