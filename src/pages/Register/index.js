@@ -30,10 +30,10 @@ const Register = ({ ...props }) => {
         keyboardType: 'email-address',
     },{
         title: "Qual seu nome completo?",
-        input_type: 'nome'
+        input_type: 'name'
     },{
         title: "Agora digite sua senha do aplicativo",
-        input_type: 'senha',
+        input_type: 'password',
         isPassword: true,
         placeholder: '8 dígitos ou mais'
     },{
