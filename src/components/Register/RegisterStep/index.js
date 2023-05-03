@@ -4,6 +4,8 @@ import { TextInputMask } from "react-native-masked-text";
 import InputForm from "../../General/InputForm";
 import RegisterButton from "../../Onboarding/RegisterButton";
 import { styles } from "./styles";
+import axios from "axios";
+import FlashMessage, { showMessage } from "react-native-flash-message";
 import { createUser } from "@root/src/services/api";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -24,7 +26,7 @@ const RegisterStep = ({ ...props }) => {
         emailRegex.test(data) ? setIsValid(true) : setIsValid(false);
         setInputData(data);
         break;
-      case "senha":
+      case "password":
         data.length >= 8 ? setIsValid(true) : setIsValid(false);
         setInputData(data);
         break;
@@ -35,7 +37,7 @@ const RegisterStep = ({ ...props }) => {
     }
   };
 
-  const handleFormSubmitAndNext = () => {
+  const handleFormSubmitAndNext = async () => {
     if (inputType) {
       const data = {
         ...props.dataForm,
@@ -46,14 +48,29 @@ const RegisterStep = ({ ...props }) => {
     } else {
       // Integrar com API
       // Enviar props.dataForm para a API
-      console.log(props.dataForm);
-      const response = createUser(props.dataForm);
-      console.log(response);
+      // console.log(props.dataForm);
+      try{
+        const response = createUser(props.dataForm);
+        console.log(response);
+
+        // showMessage({
+        //   type: "success",
+        //   message: "Cadastro realizado com sucesso. Faça login para continuar."
+        // });
+        
+      }catch(error){
+        
+        console.log({error});
+        // showMessage({
+        //     type:"warning",
+        //     message:"Erro na comunicação com o servidor. Tente novamente."
+        // })
+      }
     }
   };
 
   const handleInputChange = (value) => {
-    if (inputType == "nome") {
+    if (inputType == "name") {
       validadeData(value);
     } else {
       const newValue = value.replace(/\s/g, "");
@@ -63,6 +80,7 @@ const RegisterStep = ({ ...props }) => {
 
   return (
     <View style={styles.container}>
+      <FlashMessage />
       <View style={styles.header}>
         <Text style={styles.title}>{props.data.title}</Text>
         <Text style={styles.subtitle}>{props.data.subtitle}</Text>
